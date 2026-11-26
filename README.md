@@ -1,12 +1,10 @@
+<p align="center"><img src="assets/banner.svg" alt="subdangler banner" width="100%"/></p>
+
 # subdangler
 
-Dangling DNS / subdomain takeover risk checker. Given a list of hostnames,
-`subdangler` resolves their CNAME records, flags CNAMEs that point at
-takeover-prone third-party services (GitHub Pages, Heroku, AWS S3, Azure,
-Netlify, Shopify, Fastly, and more), and checks whether the target looks
-unclaimed — either because the HTTP response carries the service's
-"no such resource" fingerprint or because the CNAME target no longer
-resolves at all.
+[![CI](https://github.com/gravion-ux/subdangler/actions/workflows/ci.yml/badge.svg)](https://github.com/gravion-ux/subdangler/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+**Dangling DNS / subdomain takeover risk checker.**
 
 Pure Python standard library: CNAME lookups use DNS-over-HTTPS JSON
 (Google Public DNS by default) via `urllib`, existence checks use
